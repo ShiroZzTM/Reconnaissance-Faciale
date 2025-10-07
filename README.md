@@ -60,70 +60,76 @@ Le projet est structuré en deux modules principaux :
 ## 🚀 Installation
 
 1. **Cloner le repository**
+```
 git clone https://github.com/votre-username/OpenCV-Face-Recognition.git
 cd OpenCV-Face-Recognition
+````
 
-text
 
-2. **Installer les dépendances**
+3. **Installer les dépendances**
+```
 pip install opencv-python
 pip install opencv-contrib-python
 pip install numpy
+```
 
-text
 
-3. **Vérifier l'installation**
+5. **Vérifier l'installation**
+```
 python --version
 python -c "import cv2; print(cv2.version)"
+```
 
-text
 
 ## 💻 Utilisation
 
 ### Détection de Visages
-
+```
 python FaceDetection/faceDetection.py
+```
 
-text
 
 ### Détection des Yeux
-
+```
 python FaceDetection/faceEyeDetection.py
+```
 
-text
 
 ### Détection de Sourires
-
+```
 python FaceDetection/faceSmileDetection.py
+```
 
-text
 
 ### Détection Combinée (Visages + Yeux + Sourires)
-
+```
 python FaceDetection/faceSmileEyeDetection.py
+```
 
-text
 
 ### Reconnaissance Faciale Personnalisée
 
 **Étape 1 : Créer un dataset**
+```
 python FacialRecognition/01_face_dataset.py
+```
 
-text
 Suivez les instructions pour capturer des images de visages.
 
 **Étape 2 : Entraîner le modèle**
+```
 python FacialRecognition/02_face_training.py
+```
 
-text
 
 **Étape 3 : Reconnaissance en temps réel**
+```
 python FacialRecognition/03_face_recognition.py
+```
 
-text
 
 ## 📁 Structure des Fichiers
-
+```
 OpenCV-Face-Recognition/
 │
 ├── FaceDetection/
@@ -149,8 +155,8 @@ OpenCV-Face-Recognition/
 │
 ├── README.md
 └── requirements.txt
+```
 
-text
 
 ## 🛠️ Technologies Utilisées
 
@@ -190,7 +196,7 @@ Une fois entraîné, le système peut identifier des personnes spécifiques et a
 ### Paramètres de Détection
 
 Vous pouvez ajuster les paramètres de détection dans les scripts :
-
+```
 Paramètres de detectMultiScale
 faces = face_cascade.detectMultiScale(
 gray,
@@ -198,8 +204,8 @@ scaleFactor=1.1, # Facteur d'échelle (1.1 - 1.5)
 minNeighbors=5, # Nombre minimum de voisins (3-6)
 minSize=(30, 30) # Taille minimale du visage
 )
+```
 
-text
 
 ## 📝 Notes Importantes
 
@@ -215,15 +221,16 @@ Vérifiez que votre webcam est connectée et autorisée
 Essayez de changer l'index de la caméra dans le code
 cap = cv2.VideoCapture(0) # Essayez 0, 1, ou 2
 
-text
+
 
 **Erreur : Cascade file not found**
 Vérifiez que les fichiers XML sont dans le bon répertoire
 Téléchargez-les depuis le repository OpenCV si nécessaire
-text
+
 
 ## 📚 Ressources
 
 - [Documentation OpenCV](https://docs.opencv.org/)
 - [Tutoriel Face Recognition OpenCV](https://docs.opencv.org/3.4/da/d60/tutorial_face_main.html)
+
 - [Cascades de Haar](https://github.com/opencv/opencv/tree/master/data/haarcascades)
